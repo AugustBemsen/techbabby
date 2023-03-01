@@ -4,13 +4,10 @@ import images from "../../assets";
 import ProjectsSectionStyled from "../../styles/projectStyles";
 
 const ProjectsSection: FunctionComponent = () => {
-  const { cryptlyCard, zendCard, idrivaCard } = images;
+  const { cryptlyCard, zendCard, idrivaCard, transportCard, zendWebCard } =
+    images;
   return (
     <ProjectsSectionStyled>
-      <h2>
-        Recent Projects
-        <span>*</span>
-      </h2>
       <div className="project-card">
         <div className="title">
           <p>Zend Wallet</p>
@@ -31,11 +28,29 @@ const ProjectsSection: FunctionComponent = () => {
       </div>
       <div className="project-card">
         <div className="title">
+          <p>Zend Wallet</p>
+          <p>Cryptocurrency Wallet/Webapp</p>
+        </div>
+        <div className="img-card">
+          <img src={zendWebCard} alt="Zend Wallet" />
+        </div>
+      </div>
+      <div className="project-card">
+        <div className="title">
           <p>Idriva</p>
           <p>Transportation /Mobile App</p>
         </div>
         <div className="img-card">
           <img src={idrivaCard} alt="Zend Wallet" />
+        </div>
+      </div>
+      <div className="project-card">
+        <div className="title">
+          <p>Transport Service Limited Website Redesign</p>
+          <p>Transportation /Website</p>
+        </div>
+        <div className="img-card">
+          <img src={transportCard} alt="Zend Wallet" />
         </div>
       </div>
     </ProjectsSectionStyled>
