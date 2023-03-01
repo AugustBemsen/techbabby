@@ -9,6 +9,7 @@ import playlist from "./playlist.png";
 import reading from "./reading.png";
 import movies from "./movies.png";
 import zendBanner from "./zend-banner.png";
+import lady from "./lady.png";
 
 const images = {
   avatar1,
@@ -22,6 +23,7 @@ const images = {
   reading,
   movies,
   zendBanner,
+  lady,
 };
 
 export default images;

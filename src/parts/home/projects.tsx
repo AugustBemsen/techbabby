@@ -37,9 +37,11 @@ const ProjectsSection: FunctionComponent = () => {
           <p>Idriva</p>
           <p>Transportation /Mobile App</p>
         </div>
-        <div className="img-card">
-          <img src={idrivaCard} alt="Zend Wallet" />
-        </div>
+        <Link to="/projects/idriva">
+          <div className="img-card">
+            <img src={idrivaCard} alt="Zend Wallet" />
+          </div>
+        </Link>
       </div>
     </ProjectsSectionStyled>
   );
