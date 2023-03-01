@@ -6,20 +6,66 @@ const Footer: FunctionComponent = () => {
   return (
     <FooterStyled>
       <div className="list-text">
-        <a>Linkedin</a>
-        <a>Dribble</a>
-        <a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/olatunji-monsurat-ojuolape-366b63169/"
+        >
+          Linkedin
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://dribbble.com/Monsurat01"
+        >
+          Dribble
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:ojuolatunji95@gmail.com"
+        >
           Contact me - <span> ojuolatunji95@gmail.com</span>
         </a>
       </div>
       <div className="list-text">
-        <a>Instagram</a>
-        <a>Medium</a>
-        <a>Youtube</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/techbabby/"
+        >
+          Instagram
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://medium.com/@ojuolatunji95"
+        >
+          Medium
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.youtube.com/channel/UCQLhOYnhI8Z5XFvFTvAwRLg"
+        >
+          Youtube
+        </a>
       </div>
       <div className="list-text">
-        <a>Twitter</a>
-        <a>Pinterest</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/techbabby"
+        >
+          Twitter
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.pinterest.com/ojuolatunji/"
+        >
+          Pinterest
+        </a>
       </div>
 
       <p>@{date} Olatunji Monsurat Ojuolape Portfolio</p>
