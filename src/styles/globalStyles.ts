@@ -78,6 +78,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  h3, h4, h5, h6 {
+    font-family: ${({ theme }) => theme.fonts.FontFace.secondary};
+    color: ${({ theme }) => theme.colors.black};
+  }
+
   
 
 `;

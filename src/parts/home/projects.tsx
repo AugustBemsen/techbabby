@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import images from "../../assets";
 import ProjectsSectionStyled from "../../styles/projectStyles";
@@ -16,9 +17,11 @@ const ProjectsSection: FunctionComponent = () => {
           <p>Zend Wallet</p>
           <p>Cryptocurrency Wallet /Mobile App</p>
         </div>
-        <div className="img-card">
-          <img src={zendCard} alt="Zend Wallet" />
-        </div>
+        <Link to="/projects/zend">
+          <div className="img-card">
+            <img src={zendCard} alt="Zend Wallet" />
+          </div>
+        </Link>
       </div>
       <div className="project-card">
         <div className="title">

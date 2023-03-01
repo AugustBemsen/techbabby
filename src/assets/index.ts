@@ -8,6 +8,7 @@ import roseAvatar from "./rose-avatar.png";
 import playlist from "./playlist.png";
 import reading from "./reading.png";
 import movies from "./movies.png";
+import zendBanner from "./zend-banner.png";
 
 const images = {
   avatar1,
@@ -20,6 +21,7 @@ const images = {
   playlist,
   reading,
   movies,
+  zendBanner,
 };
 
 export default images;

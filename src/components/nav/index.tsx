@@ -1,51 +1,59 @@
 import { FunctionComponent } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import images from "../../assets";
 
-const NavBar: FunctionComponent = () => (
+interface Props {
+  noNav?: boolean;
+}
+
+const NavBar: FunctionComponent<Props> = ({ noNav }) => (
   <NavBarStyled>
-    <div className="user">
-      <img src={images.avatar1} alt="tech baby" />
-      <h3>Olatunji Monsurat Ojuolape</h3>
-    </div>
-    <div className="nav-links">
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
-        }
-        to="/"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
-        }
-        to="/about"
-      >
-        About
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
-        }
-        to="/projects"
-      >
-        Projects
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
-        }
-        to="/works"
-      >
-        Work Experience
-      </NavLink>
-      <button type="button">
-        <a href="mailto:ojuolatunji95@gmail.com">Contact Me</a>
-      </button>
-    </div>
+    <Link to="/">
+      <div className="user">
+        <img src={images.avatar1} alt="tech baby" />
+        <h3>Olatunji Monsurat Ojuolape</h3>
+      </div>
+    </Link>
+    {!noNav && (
+      <div className="nav-links">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+          to="/about"
+        >
+          About
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+          to="/projects"
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+          to="/works"
+        >
+          Work Experience
+        </NavLink>
+        <button type="button">
+          <a href="mailto:ojuolatunji95@gmail.com">Contact Me</a>
+        </button>
+      </div>
+    )}
   </NavBarStyled>
 );
 
