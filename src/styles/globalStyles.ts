@@ -58,12 +58,27 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: ${({ theme }) => theme.fonts.sizes.px80};
+    font-weight: ${({ theme }) => theme.fonts.weights.f700};
     color: ${({ theme }) => theme.colors.black};
+    font-family: ${({ theme }) => theme.fonts.FontFace.secondary};
 
     span {
       color: ${({ theme }) => theme.colors.primary};
     }
   }
+
+  h2 {
+    font-size: ${({ theme }) => theme.fonts.sizes.px35};
+    font-weight: ${({ theme }) => theme.fonts.weights.f700};
+    color: ${({ theme }) => theme.colors.black};
+    font-family: ${({ theme }) => theme.fonts.FontFace.secondary};
+
+    span {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
+  
 
 `;
 

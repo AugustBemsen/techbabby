@@ -27,10 +27,10 @@ declare module "styled-components" {
         px33: string;
       };
       weights: {
-        regular: number;
-        large: number;
-        bold: number;
-        normal: number;
+        f400: number;
+        f500: number;
+        f600: number;
+        f700: number;
       };
       FontFace: {
         primary: string;

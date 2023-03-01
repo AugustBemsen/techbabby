@@ -22,10 +22,10 @@ const theme = {
       px33: "2.0625",
     },
     weights: {
-      normal: 400,
-      regular: 500,
-      bold: 600,
-      large: 700,
+      f400: 400,
+      f500: 500,
+      f600: 600,
+      f700: 700,
     },
     FontFace: {
       primary: "Nunito, sans-serif",
