@@ -261,4 +261,17 @@ const WorkListStyled = styled.div`
   p {
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 850px) {
+    padding: 1rem;
+    .list {
+      width: 77%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .list {
+      width: 90%;
+    }
+  }
 `;
