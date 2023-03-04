@@ -228,4 +228,21 @@ const AboutBodyStyled = styled.div`
       object-fit: cover;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+
+    .sect {
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    .message {
+      width: 100%;
+    }
+
+    .tit svg {
+      display: none;
+    }
+  }
 `;

@@ -74,6 +74,27 @@ export const AboutHeroStyled = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 850px) {
+    .hero-content p {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+    /* background: #006699;
+    filter: blur(400px); */
+    .hero-content p {
+      font-size: ${({ theme }) => theme.fonts.sizes.px16};
+      padding-top: 0.8rem;
+    }
+  }
 `;
 
 export default HeroStyled;
