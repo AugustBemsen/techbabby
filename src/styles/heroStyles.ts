@@ -4,6 +4,31 @@ const HeroStyled = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 1.5rem 3rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    background: #8c3aaa;
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    width: 180px;
+    height: 180px;
+    z-index: -50;
+    filter: blur(400px);
+  }
+
+  &::after {
+    content: "";
+    background: #006699;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    width: 150px;
+    height: 150px;
+    z-index: -50;
+    filter: blur(400px);
+  }
 
   .hero-content {
     width: 100%;
@@ -44,6 +69,30 @@ export const AboutHeroStyled = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 1.5rem 3rem;
+
+  &::before {
+    content: "";
+    background: #8c3aaa;
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    width: 180px;
+    height: 180px;
+    z-index: -50;
+    filter: blur(400px);
+  }
+
+  &::after {
+    content: "";
+    background: #006699;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    width: 150px;
+    height: 150px;
+    z-index: -50;
+    filter: blur(400px);
+  }
 
   .hero-content {
     width: 100%;
