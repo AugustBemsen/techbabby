@@ -160,6 +160,33 @@ const ProjectSlugStyled = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 850px) {
+    .intro .des {
+      width: 75%;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+    .intro .des {
+      width: 90%;
+      font-size: ${({ theme }) => theme.fonts.sizes.px16};
+      padding-top: 0;
+    }
+
+    .zend-banner {
+      height: 300px;
+    }
+
+    .zend-actions {
+      padding: 0;
+      margin: 0;
+      margin-top: 2rem;
+      grid-row-gap: 2rem;
+    }
+  }
 `;
 
 export default ProjectSlugStyled;
