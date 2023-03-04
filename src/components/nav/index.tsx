@@ -1,61 +1,68 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 import images from "../../assets";
+import NavBarSlide from "./slide";
+import Toggle from "../../assets/toggle";
 
 interface Props {
   noNav?: boolean;
 }
 
-const NavBar: FunctionComponent<Props> = ({ noNav }) => (
-  <NavBarStyled>
-    <Link to="/">
-      <div className="user">
-        <img src={images.avatar1} alt="tech baby" />
-        <h3>Olatunji Monsurat Ojuolape</h3>
-      </div>
-    </Link>
-    {!noNav && (
-      <div className="nav-links">
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          to="/"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          to="/about"
-        >
-          About
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          to="/projects"
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          to="/works"
-        >
-          Work Experience
-        </NavLink>
-        <button type="button">
-          <a href="mailto:ojuolatunji95@gmail.com">Contact Me</a>
-        </button>
-      </div>
-    )}
-  </NavBarStyled>
-);
+const NavBar: FunctionComponent<Props> = ({ noNav }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  return (
+    <NavBarStyled>
+      <Link to="/">
+        <div className="user">
+          <img src={images.avatar1} alt="tech baby" />
+          <h3>Olatunji Monsurat Ojuolape</h3>
+        </div>
+      </Link>
+      {!noNav && (
+        <div className="nav-links">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            to="/about"
+          >
+            About
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            to="/projects"
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            to="/works"
+          >
+            Work Experience
+          </NavLink>
+          <button type="button">
+            <a href="mailto:ojuolatunji95@gmail.com">Contact Me</a>
+          </button>
+        </div>
+      )}
+      <Toggle onClick={() => setIsVisible(true)} className="toggle" />
+      <NavBarSlide isVisible={isVisible} setIsVisible={setIsVisible} />
+    </NavBarStyled>
+  );
+};
 
 export default NavBar;
 
@@ -144,9 +151,16 @@ const NavBarStyled = styled.div`
     }
   }
 
+  .toggle {
+    display: none;
+  }
+
   @media screen and (max-width: 850px) {
     .nav-links {
       display: none;
+    }
+    .toggle {
+      display: block;
     }
   }
 
