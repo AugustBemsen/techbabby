@@ -83,6 +83,18 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.black};
   }
 
+
+  @media screen and (max-width: 500px) {
+
+    h1 {
+      font-size: ${({ theme }) => theme.fonts.sizes.px35};
+    }
+
+    h2 {
+      font-size: ${({ theme }) => theme.fonts.sizes.px25};
+    }
+
+   }
   
 
 `;

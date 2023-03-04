@@ -143,4 +143,24 @@ const NavBarStyled = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 850px) {
+    .nav-links {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .user {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+
+      h3 {
+        font-size: ${({ theme }) => theme.fonts.sizes.px18};
+        margin-left: 0.5rem;
+      }
+    }
+  }
 `;

@@ -35,6 +35,23 @@ const ProjectsSectionStyled = styled.div`
       object-fit: cover;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+
+    .project-card {
+      margin-bottom: 2rem;
+    }
+
+    .title p {
+      font-size: ${({ theme }) => theme.fonts.sizes.px16};
+    }
+
+    .img-card {
+      border-radius: ${({ theme }) => theme.border.radius.px20};
+      height: 250px;
+    }
+  }
 `;
 
 export default ProjectsSectionStyled;

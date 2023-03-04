@@ -65,4 +65,22 @@ const RecommendationSectionStyled = styled.div`
       color: ${({ theme }) => theme.colors.primary};
     }
   }
+
+  @media screen and (max-width: 850px) {
+    .recommend {
+      width: 95%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+
+    .recommend {
+      margin-bottom: 2rem;
+    }
+
+    .message {
+      font-size: ${({ theme }) => theme.fonts.sizes.px16};
+    }
+  }
 `;

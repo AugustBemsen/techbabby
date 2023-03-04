@@ -35,6 +35,7 @@ const BannerStyled = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 3rem;
+  overflow-x: hidden;
 
   p {
     width: 100%;
