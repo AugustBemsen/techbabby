@@ -170,6 +170,11 @@ const ProjectSlugStyled = styled.div`
 
   @media screen and (max-width: 500px) {
     padding: 1rem;
+
+    .zend-content {
+      padding-top: 1.5rem;
+    }
+
     .intro .des {
       width: 90%;
       font-size: ${({ theme }) => theme.fonts.sizes.px16};
@@ -185,6 +190,29 @@ const ProjectSlugStyled = styled.div`
       margin: 0;
       margin-top: 2rem;
       grid-row-gap: 2rem;
+    }
+
+    .about-com {
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .com-flex {
+      display: block;
+
+      .img-side {
+        width: 100%;
+        height: 400px;
+      }
+
+      .text-side {
+        width: 100%;
+        margin-top: 2rem;
+      }
     }
   }
 `;
