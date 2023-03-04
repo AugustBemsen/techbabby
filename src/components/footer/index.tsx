@@ -104,4 +104,18 @@ const FooterStyled = styled.div`
     font-weight: ${({ theme }) => theme.fonts.weights.f600};
     margin-bottom: 1rem;
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+
+    .list-text {
+      margin-bottom: 0;
+
+      a {
+        margin-right: 2rem;
+        font-size: ${({ theme }) => theme.fonts.sizes.px16};
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
 `;
