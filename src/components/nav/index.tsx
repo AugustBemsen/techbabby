@@ -15,7 +15,9 @@ const NavBar: FunctionComponent<Props> = ({ noNav }) => {
     <NavBarStyled>
       <Link to="/">
         <div className="user">
-          <img src={images.avatar1} alt="tech baby" />
+          <div className="img">
+            <img src={images.avatar1} alt="tech baby" />
+          </div>
           <h3>Olatunji Monsurat Ojuolape</h3>
         </div>
       </Link>
@@ -78,11 +80,18 @@ const NavBarStyled = styled.div`
     display: flex;
     align-items: center;
 
-    img {
-      display: block;
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
+    .img {
+      width: 40px;
+      height: 40px;
+      object-fit: fill;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img {
+        display: block;
+        /* height: 100%; */
+        width: 100%;
+      }
     }
 
     h3 {
