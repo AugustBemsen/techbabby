@@ -58,6 +58,12 @@ const HeroStyled = styled.div`
     padding: 1rem;
     /* background: #006699;
     filter: blur(400px); */
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
     .hero-content p {
       font-size: ${({ theme }) => theme.fonts.sizes.px16};
       padding-top: 0.8rem;
@@ -139,6 +145,12 @@ export const AboutHeroStyled = styled.div`
     padding: 1rem;
     /* background: #006699;
     filter: blur(400px); */
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
     .hero-content p {
       font-size: ${({ theme }) => theme.fonts.sizes.px16};
       padding-top: 0.8rem;
