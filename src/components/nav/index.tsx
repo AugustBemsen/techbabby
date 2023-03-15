@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import styled from "styled-components";
+import { motion, useScroll } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import images from "../../assets";
 import NavBarSlide from "./slide";
@@ -12,7 +13,11 @@ interface Props {
 const NavBar: FunctionComponent<Props> = ({ noNav }) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <NavBarStyled>
+    <NavBarStyled
+      whileInView={{
+        className: "not-scrolling",
+      }}
+    >
       <Link to="/">
         <div className="user">
           <div className="img">
@@ -70,11 +75,17 @@ const NavBar: FunctionComponent<Props> = ({ noNav }) => {
 
 export default NavBar;
 
-const NavBarStyled = styled.div`
-  width: 100%;
+const NavBarStyled = styled(motion.div)`
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 3rem;
+  background: ${({ theme }) => theme.colors.bg};
+  z-index: 200;
 
   .user {
     display: flex;

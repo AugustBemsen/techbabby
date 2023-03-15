@@ -102,7 +102,7 @@ export const AboutHeroStyled = styled.div`
 
   .hero-content {
     width: 100%;
-    margin-top: 7.3%;
+    margin-top: 8.5%;
 
     .about-head {
       display: flex;
